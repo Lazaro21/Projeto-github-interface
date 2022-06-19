@@ -1,7 +1,7 @@
 import React from 'react'
 import App from './App'
 import { ResetCSS } from './global/resetCSS'
-import GithubProvider from './Providers/gitHubProvider'
+import GithubProvider from './Providers/github-provider'
 
 function providers() {
     return (
