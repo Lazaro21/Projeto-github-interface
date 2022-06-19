@@ -8,6 +8,7 @@ const Header = () => {
 
   const submitGetUser = () => {
     if(!usernameForSearch) return 
+    console.log(usernameForSearch)
     return getUser(usernameForSearch)
   } 
   return (
@@ -18,7 +19,7 @@ const Header = () => {
         placeholder='Digite o username para pesquisa...' 
         onChange={(event) => setUsernameForSearch(event.target.value)}
         />
-        <button type="submit">
+        <button type="submit" onClick={() => submitGetUser()}>
           <span>Buscar</span>
         </button>
       </S.Wrapper>

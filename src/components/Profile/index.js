@@ -9,18 +9,34 @@ export default function Profile() {
     return (
         <S.Wrapper>
 
-            <S.WrapperImage src="https://avatars.githubusercontent.com/u/7505901?v=4" />
+            <S.WrapperImage src={githubState.user.avatar} />
             <S.WrapperInfoUser>
                 <div>
                     <h1>{githubState.user.name}</h1>
-                    <S.WrapperUserName>
+                    <S.WrapperUserGeneric>
                         <h3>Username: </h3>
                         <a
-                            href="https://github.com/Lazaro21"
+                            href={githubState.user.html_url}
                             target="_blank" >
                             {githubState.user.login}
                         </a>
-                    </S.WrapperUserName>
+                    </S.WrapperUserGeneric>
+                    <S.WrapperUserGeneric>
+                        <h3>Company: </h3>
+                        <span>{githubState.user.company}</span>
+                    </S.WrapperUserGeneric>
+                    <S.WrapperUserGeneric>
+                        <h3>Location: </h3>
+                        <span>{githubState.user.location}</span>
+                    </S.WrapperUserGeneric>
+                    <S.WrapperUserGeneric>
+                        <h3>Blog: </h3>
+                        <a
+                            href={githubState.user.blog}
+                            target="_blank" >
+                            {githubState.user.blog}
+                        </a>
+                    </S.WrapperUserGeneric>
                 </div>
                 <S.WrapperStatusCount>
                     <div>

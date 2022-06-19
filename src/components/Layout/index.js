@@ -1,12 +1,14 @@
 import React from 'react'
 import Header from '../Header'
+import useGitHub from '../../hooks/github-hooks'
 import * as S from './styled'
 
-function Layout({children}) {
+function Layout({ children }) {
+    
     return (
         <S.WrapperLayout>
-            <Header></Header>
-            {children}
+            <Header />      
+            { children }      
         </S.WrapperLayout>
     )
 }
