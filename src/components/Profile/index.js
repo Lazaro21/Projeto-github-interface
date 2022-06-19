@@ -1,17 +1,18 @@
 import React from 'react'
 import * as S from './styled'
+import api from '../../services/api'
 
 export default function Profile() {
     return (
         <S.Wrapper>
 
-            <S.WrapperImage src="https://avatars.githubusercontent.com/u/7505901?v=4" />
+            <S.WrapperImage src="https://avatars.githubusercontent.com/u/7505901?v=4"/>
             <S.WrapperInfoUser>
                 <div>
                     <h1>Odeir Lázaro</h1>
                     <S.WrapperUserName>
                         <h3>Username: </h3>
-                        <span>Lazaro21</span>
+                        <a href="https://github.com/Lazaro21" target="_blank" >Lazaro21</a>
                     </S.WrapperUserName>
                 </div>
                 <S.WrapperStatusCount>
@@ -20,7 +21,7 @@ export default function Profile() {
                         <span>2</span>
                     </div>
                     <div>
-                        <h4>Starreds</h4>
+                        <h4>Starred</h4>
                         <span>2</span>
                     </div>
                     <div>
