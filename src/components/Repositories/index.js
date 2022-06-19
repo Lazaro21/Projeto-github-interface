@@ -1,7 +1,7 @@
 import React from 'react'
 import * as S from "./styled"
 
-export default Repositories = () => {
+const Repositories = () => {
     return (
         <S.WrapperTabs 
             selectedTabClassName="is-selected"
@@ -15,6 +15,10 @@ export default Repositories = () => {
                     Starred
                 </S.WrapperTab>
             </S.WrapperTabList>
+            <S.WrapperTabPanel>Panel Repositories</S.WrapperTabPanel>
+            <S.WrapperTabPanel>Panel Starred</S.WrapperTabPanel>
         </S.WrapperTabs>
     )
 }
+
+export default Repositories
