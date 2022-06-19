@@ -1,15 +1,17 @@
 import React from 'react'
 import * as S from './styled'
 import api from '../../services/api'
+import useGitHub from '../../hooks/github-hooks'
 
 export default function Profile() {
+    const { gitHubState } = useGitHub()
     return (
         <S.Wrapper>
 
-            <S.WrapperImage src="https://avatars.githubusercontent.com/u/7505901?v=4"/>
+            <S.WrapperImage src="https://avatars.githubusercontent.com/u/7505901?v=4" />
             <S.WrapperInfoUser>
                 <div>
-                    <h1>Odeir Lázaro</h1>
+                    <h1>{gitHubState.user.name}</h1>
                     <S.WrapperUserName>
                         <h3>Username: </h3>
                         <a href="https://github.com/Lazaro21" target="_blank" >Lazaro21</a>
@@ -30,7 +32,6 @@ export default function Profile() {
                     </div>
                 </S.WrapperStatusCount>
             </S.WrapperInfoUser>
-
         </S.Wrapper >
     )
 }
